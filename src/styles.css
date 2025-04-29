@@ -4,14 +4,13 @@
     --project-item-bg: green;
     --lander-bg: lightblue;
     --aboutme-bg: aquamarine;
-    --content-spacing: 1cm;
+    --contact-bg: lavender;
+    --content-spacing: 0.3cm;
     --skew-size: 1cm;
-    --content-deflection: 1cm;
 }
 
 body {
     background: var(--background);
-    padding-bottom: 1cm;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -36,6 +35,14 @@ body {
     margin-bottom: var(--content-spacing);
 }
 
+footer {
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% var(--skew-size));
+    background-color: black;
+    height: 2cm;
+    width: 70vw;
+    margin-top: calc(-1 * var(--skew-size));
+}
+
 .content>h2:first-child {
     margin-top: 0;
 }
@@ -48,13 +55,13 @@ body {
     margin-top: calc(-1 * var(--skew-size));
 }
 
-.content:nth-child(odd) {
+/* .content:nth-child(odd) {
     transform: translateX(var(--content-deflection));
 }
 
 .content:nth-child(even) {
     transform: translateX(calc(-1 * var(--content-deflection)));
-}
+} */
 
 #projects {
     background-color: var(--projects-bg);
@@ -87,16 +94,8 @@ body {
     background-color: var(--aboutme-bg);
 }
 
-/* Currently not used. */
-footer {
-    width: 100vw;
-    background-color: rgb(15, 6, 1);
-    color: white;
-}
-
-footer>div {
-    width: 70vw;
-    margin: 0 auto;
+#contact {
+    background-color: var(--contact-bg);
 }
 
 /* Inline icons */
