@@ -1,14 +1,114 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+:root {
+    --background: gray;
+    --projects-bg: beige;
+    --project-item-bg: green;
+    --lander-bg: lightblue;
+    --aboutme-bg: aquamarine;
+    --content-spacing: 1cm;
+    --skew-size: 1cm;
+    --content-deflection: 1cm;
 }
 
-#primary {
-    height: fit-content;
-    padding: 15px;
-    border: 2px solid rgb(160, 160, 160);
-    border-radius: 6px;
+body {
+    background: var(--background);
+    padding-bottom: 1cm;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#lander {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 3em;
+
+    /* border: 2px solid black; */
+    border-radius: 16px;
+
+    background-color: var(--lander-bg);
+}
+
+.content {
+    clip-path: polygon(0 0, 0 calc(100% - var(--skew-size)), 100% 100%, 100% var(--skew-size));
+    padding: 20px;
+    padding-bottom: calc(20px + var(--skew-size));
+    margin-bottom: var(--content-spacing);
+}
+
+.content>h2:first-child {
+    margin-top: 0;
+}
+
+.content>p {
+    margin: 0 2em;
+}
+
+.content:not(:first-child) {
+    margin-top: calc(-1 * var(--skew-size));
+}
+
+.content:nth-child(odd) {
+    transform: translateX(var(--content-deflection));
+}
+
+.content:nth-child(even) {
+    transform: translateX(calc(-1 * var(--content-deflection)));
+}
+
+#projects {
+    background-color: var(--projects-bg);
+}
+
+.project-item {
+    background-color: var(--project-item-bg);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px;
+}
+
+.project-item>div {
+    width: fit-content;
+    padding: 0 1em;
+    border-bottom: 1px solid black;
+}
+
+.project-item>div>.name {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.project-item>div>a {
+    color: rgb(43, 43, 43);
+    text-decoration: underline dotted;
+}
+
+#aboutme {
+    background-color: var(--aboutme-bg);
+}
+
+/* Currently not used. */
+footer {
+    width: 100vw;
+    background-color: rgb(15, 6, 1);
+    color: white;
+}
+
+footer>div {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+/* Inline icons */
+.gh-icon {
+    vertical-align: middle;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0.2em;
+    transform: translateY(-10%);
+
+    background-image: url("static/github-mark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
