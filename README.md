@@ -1,1 +1,0 @@
-A basic static website for my developer information.
