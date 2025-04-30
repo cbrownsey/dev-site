@@ -1,35 +1,18 @@
 :root {
-    --background: darkslategrey;
-    --projects-bg: beige;
-    --project-item-bg: green;
-    --lander-bg: lightblue;
-    --aboutme-bg: aquamarine;
-    --contact-bg: lavender;
-    --content-spacing: 0.3cm;
+    --background: linear-gradient(#101011, #110f18);
+    --project-item-bg: rgb(10, 9, 17);
+    --lander-bg: rgb(83, 83, 83);
+    --content-bg: #1c1b22;
+    --footer-bg: var(--content-bg);
+    --content-spacing: 0.4cm;
     --skew-size: 1cm;
 }
 
 body {
-    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite; */
-    background-color: var(--background);
+    background: var(--background);
     height: 100vh;
+    background-attachment: fixed;
 }
-
-/* @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-} */
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -50,6 +33,7 @@ body {
 }
 
 .content {
+    color: #dfdbdd;
     clip-path: polygon(0 0, 0 calc(100% - var(--skew-size)), 100% 100%, 100% var(--skew-size));
     padding: 20px;
     padding-bottom: calc(20px + var(--skew-size));
@@ -58,7 +42,7 @@ body {
 
 footer {
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% var(--skew-size));
-    background-color: black;
+    background-color: var(--footer-bg);
     height: 2cm;
     width: 70vw;
     margin-top: calc(-1 * var(--skew-size));
@@ -76,16 +60,8 @@ footer {
     margin-top: calc(-1 * var(--skew-size));
 }
 
-/* .content:nth-child(odd) {
-    transform: translateX(var(--content-deflection));
-}
-
-.content:nth-child(even) {
-    transform: translateX(calc(-1 * var(--content-deflection)));
-} */
-
 #projects {
-    background-color: var(--projects-bg);
+    background-color: var(--content-bg);
 }
 
 .project-item {
@@ -98,7 +74,7 @@ footer {
 .project-item>div {
     width: fit-content;
     padding: 0 1em;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #9d99c2;
 }
 
 .project-item>div>.name {
@@ -107,16 +83,16 @@ footer {
 }
 
 .project-item>div>a {
-    color: rgb(43, 43, 43);
+    color: #a8a8a8;
     text-decoration: underline dotted;
 }
 
 #aboutme {
-    background-color: var(--aboutme-bg);
+    background-color: var(--content-bg);
 }
 
 #contact {
-    background-color: var(--contact-bg);
+    background-color: var(--content-bg);
 }
 
 /* Inline icons */
@@ -128,7 +104,7 @@ footer {
     margin: 0.2em;
     transform: translateY(-10%);
 
-    background-image: url("static/github-mark.svg");
+    background-image: url("static/github-mark-white.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
