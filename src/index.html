@@ -8,44 +8,62 @@
 
         <style>
             .upper-slant {
-                clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+                clip-path: polygon(
+                    -10% -10%,
+                    0% 0%,
+                    100% 100%,
+                    110% 110%,
+                    110% -10%
+                );
             }
 
             .lower-slant {
-                clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(
+                    -10% -10%,
+                    0% 0%,
+                    100% 100%,
+                    110% 110%,
+                    -10% 110%
+                );
             }
         </style>
     </head>
 
     <body class="bg-dark-slate">
-        <div class="text-white pt-48 pb-20 w-8/10 mx-auto flex flex-col gap-48">
+        <div
+            class="text-white pt-48 pb-20 md:w-8/10 mx-auto flex flex-col gap-48"
+        >
             <header>
                 <h1 class="py-4 text-center text-5xl font-bold">
                     Cameron Brownsey
                 </h1>
-                <div class="flex justify-center gap-12">
+                <div
+                    class="flex md:flex-row flex-col items-center justify-center md:gap-12 gap-4"
+                >
                     <div>
-                        <span
-                            class="bg-[url('github-mark.svg')] size-5 -translate-y-2/25 inline-block align-middle bg-contain bg-no-repeat"
-                        ></span>
                         <a
                             href="https://github.com/cbrownsey"
                             class="hover:text-gray-400 underline decoration-dotted"
-                            >/cbrownsey</a
+                        >
+                            <span
+                                class="bg-[url('logos/github.svg')] size-5 -translate-y-2/25 inline-block align-middle bg-contain bg-no-repeat"
+                            ></span>
+                            /cbrownsey</a
                         >
                     </div>
                     <div>
-                        <span
-                            class="bg-[url('email.svg')] size-5 -translate-y-2/25 inline-block align-middle bg-contain bg-no-repeat"
-                        ></span>
                         <a
                             href="mailto:root@cbrownsey.dev"
                             class="hover:text-gray-400 underline decoration-dotted"
-                            >root@cbrownsey.dev</a
+                        >
+                            <span
+                                class="bg-[url('email.svg')] size-5 -translate-y-2/25 inline-block align-middle bg-contain bg-no-repeat"
+                            ></span>
+                            root@cbrownsey.dev</a
                         >
                     </div>
                 </div>
-                <p class="w-xl py-16 mx-auto">
+                <p class="md:w-xl pt-16 md:mx-auto mx-4 text-wrap">
                     I'm a university student with a passion for low-level
                     systems programming, backend development, and electronics. I
                     enjoy getting far too deep in the weeds, writing low-level
@@ -54,36 +72,86 @@
                     work.
                 </p>
             </header>
+            <section>
+                <div
+                    class="flex flex-wrap flex-row justify-center items-center gap-5"
+                >
+                    <div>
+                        <a href="https://rust-lang.org/" target="_blank">
+                            <span
+                                class="bg-[url('logos/rust-lang.svg')] size-16 inline-block align-middle bg-contain bg-no-repeat"
+                                title="Rust"
+                            ></span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.c-language.org/" target="_blank">
+                            <span
+                                class="bg-[url('logos/c-lang.svg')] size-12 inline-block align-middle bg-contain bg-no-repeat"
+                                title="C"
+                            ></span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://typescriptlang.org" target="_blank">
+                            <span
+                                class="bg-[url('logos/ts-lang.svg')] size-14 inline-block align-middle bg-contain bg-no-repeat"
+                                title="TypeScript"
+                            ></span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://python.org" target="_blank">
+                            <span
+                                class="bg-[url('logos/py-lang.svg')] size-14 translate-y-1 inline-block align-middle bg-contain bg-no-repeat"
+                                title="Python"
+                            ></span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://go.dev" target="_blank">
+                            <span
+                                class="bg-[url('logos/go-lang.svg')] size-30 translate-y-1 inline-block align-middle bg-contain bg-no-repeat -ml-3 -mr-2"
+                                title="Go"
+                            ></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
             <section class="bg-lightning text-black">
                 <div class="h-18 bg-dark-slate upper-slant"></div>
                 <div class="px-8 pb-8">
                     <h2 class="pb-8 pl-8 text-4xl font-bold">Projects</h2>
                     <div class="grid grid-cols-1 2xl:grid-cols-2 gap-4">
-                        <div class="bg-white rounded-xl p-8 grid grid-cols-2">
+                        <div
+                            class="bg-white rounded-xl p-8 grid md:grid-cols-2 grid-cols-1"
+                        >
                             <h3 class="text-2xl font-bold self-top">
                                 cbrownsey.dev
                             </h3>
                             <a
                                 href="https://github.com/cbrownsey/dev-site"
-                                class="hover:text-black text-right self-top text-gray-700 underline decoration-dotted"
+                                class="hover:text-black md:text-right self-top text-gray-700 underline decoration-dotted"
                                 >cbrownsey/dev-site</a
                             >
-                            <p class="col-span-2 mx-6">
+                            <p class="md:col-span-2 mx-6">
                                 The very site you're looking at right now!
                                 Written in plain HTML and TailwindCSS in the
                                 span of a day or two after I realised that I
                                 still had this domain.
                             </p>
                         </div>
-                        <div class="bg-white rounded-xl p-8 grid grid-cols-2">
+                        <div
+                            class="bg-white rounded-xl p-8 grid md:grid-cols-2 grid-cols-1"
+                        >
                             <h3 class="text-2xl font-bold self-top">Wrenlet</h3>
                             <a
                                 href="https://github.com/cbrownsey/wrenlet"
-                                class="hover:text-black text-right self-top text-gray-700 underline decoration-dotted"
+                                class="hover:text-black md:text-right self-top text-gray-700 underline decoration-dotted"
                                 >cbrownsey/wrenlet</a
                             >
-                            <p class="col-span-2 mx-6">
+                            <p class="md:col-span-2 mx-6">
                                 Wrenlet is a Rust wrapper library around the
                                 <a class="external" href="https://wren.io"
                                     >Wren</a
@@ -95,47 +163,53 @@
                                 environment.
                             </p>
                         </div>
-                        <div class="bg-white rounded-xl p-8 grid grid-cols-2">
+                        <div
+                            class="bg-white rounded-xl p-8 grid md:grid-cols-2 grid-cols-1"
+                        >
                             <h3 class="text-2xl font-bold self-top">
                                 Packing Visualiser
                             </h3>
                             <a
                                 href="https://github.com/cbrownsey/pack-visualiser"
-                                class="hover:text-black text-right self-top text-gray-700 underline decoration-dotted"
+                                class="hover:text-black md:text-right self-top text-gray-700 underline decoration-dotted"
                                 >cbrownsey/pack-visualiser</a
                             >
-                            <p class="col-span-2 mx-6">
+                            <p class="md:col-span-2 mx-6">
                                 A no-dependancy,
                                 <code>&lt;canvas&gt;</code> based, isometric
                                 visualisation library built in TypeScript for a
                                 yet-to-be-completed project.
                             </p>
                         </div>
-                        <div class="bg-white rounded-xl p-8 grid grid-cols-2">
+                        <div
+                            class="bg-white rounded-xl p-8 grid md:grid-cols-2 grid-cols-1"
+                        >
                             <h3 class="text-2xl font-bold self-top">
                                 PicoString
                             </h3>
                             <a
                                 href="https://github.com/cbrownsey/picostring"
-                                class="hover:text-black text-right self-top align-middle text-gray-700 underline decoration-dotted"
+                                class="hover:text-black md:text-right self-top align-middle text-gray-700 underline decoration-dotted"
                                 >cbrownsey/picostring</a
                             >
-                            <p class="col-span-2 mx-6">
+                            <p class="md:col-span-2 mx-6">
                                 A proof of concept small string optimization
                                 library, based off of encoding string lengths in
                                 invalid UTF-8 start bytes.
                             </p>
                         </div>
-                        <div class="bg-white rounded-xl p-8 grid grid-cols-2">
+                        <div
+                            class="bg-white rounded-xl p-8 grid md:grid-cols-2 grid-cols-1"
+                        >
                             <h3 class="text-2xl font-bold self-top">
                                 Ghost GC
                             </h3>
                             <a
                                 href="https://github.com/cbrownsey/ghost-gc"
-                                class="hover:text-black text-right self-top align-middle text-gray-700 underline decoration-dotted"
+                                class="hover:text-black md:text-right self-top align-middle text-gray-700 underline decoration-dotted"
                                 >cbrownsey/ghost-gc</a
                             >
-                            <p class="col-span-2 mx-6">
+                            <p class="md:col-span-2 mx-6">
                                 A proof of concept rewrite of
                                 <a
                                     class="hover:text-black text-gray-700 underline decoration-dotted"
